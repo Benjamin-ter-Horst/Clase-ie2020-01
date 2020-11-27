@@ -2,12 +2,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 body {
-  background-color: black;
+  background-color: midnightblue;
+  background-image: url("https://archive-media-1.nyafuu.org/wg/image/1507/49/1507496870026.gif");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
   font-size: 22px;
-  font-family: 'Russo One', sans-serif;
-  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
   width: 80%;
   max-width: 700px;
   margin: 0 auto;
 
+}
+
+.container{
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.lbl-menu{
+  background: black;
+}
+
+.lbl-menu label{
+  display: inline-block;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+
+.lbl-menu label:hover{
+  background: orange;
+}
+
+.content{
+  position: relative;
+}
+
+.content div{
+  position: absolute;
+  line-height: 1.8;
+  transition: all 600ms ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.90);
+  padding: 30px;
+  background: #fff;
+  padding-bottom: 40px;
+}
+
+#radio1,#radio2,#radio3,#radio4,#radio5{
+  display: none;
+}
+
+#radio1:checked ~ .tab1,
+#radio2:checked ~ .tab2,
+#radio3:checked ~ .tab3,
+#radio4:checked ~ .tab4,
+#radio5:checked ~ .tab5
+{
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+.content div:after{
+  position: absolute;
+  content: '';
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  bottom: 100%;
+  left: 28px;
+}
+
+.content .tab2:after{
+  left: 142px;
+}
+
+.content .tab3:after{
+  left: 270px;
+}
+
+.content .tab4:after{
+  left: 425px;
+}
+
+.content .tab5:after{
+  left: 580px;
 }
